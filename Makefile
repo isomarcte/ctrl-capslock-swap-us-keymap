@@ -9,7 +9,8 @@ clean:
 	rm ctrl-capslock-swap-us.map.gz
 
 install: ctrl-capslock-swap-us.map.gz
-	install -D -t ${DESTDIR}${TARGET_SUFFIX} ${KEYMAP_NAME}
+	install -d ${DESTDIR}${TARGET_SUFFIX}
+	install -m 644 -t ${DESTDIR}${TARGET_SUFFIX} ${KEYMAP_NAME}
 
 uninstall:
 	rm ${DESTDIR}${TARGET_SUFFIX}/${KEYMAP_NAME}
